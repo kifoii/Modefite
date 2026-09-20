@@ -53,7 +53,7 @@ Modefite 原本会忽略未知属性或字段，而不是直接生成缺失模�
 
 ### 问题反馈
 
-你可以通过 GitHub Issue 反馈 Modefite 的 Bug、兼容性问题和功能请求。\n\n**如果你不会使用 GitHub，或者不知道怎么创建 Issue，也可以直接发邮件反馈：**\n\n**2953701641@qq.com**
+你可以通过 GitHub Issue 反馈 Modefite 的 Bug、兼容性问题和功能请求。\n\n**如果你不会使用 GitHub，或者不知道怎么创建 Issue，也可以直接发邮件反馈：**\n\n**jetzt19@qq.com**
 
 提交问题时，如果可以，请附带 Minecraft 版本、Fabric Loader 版本、Fabric API 版本、Modefite 版本、相关资源包，以及必要的 `latest.log` 信息，这样更方便定位问题。
 
