@@ -57,7 +57,7 @@ You can report Modefite bugs, compatibility problems, and feature requests throu
 
 If you don't understand GitHub or don't know how to create an Issue, you can also send feedback directly by email:
 
-**2953701641@qq.com**
+**jetzt19@qq.com**
 
 When possible, include your Minecraft version, Fabric Loader version, Fabric API version, Modefite version, the affected resource pack, and relevant `latest.log` information.
 
