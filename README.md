@@ -1,37 +1,122 @@
 # Modefite - Item Definition Backport
 
-Modefite backports Minecraft's item model definition system to older versions and provides additional item-definition features.
+---
+
+Modefite is a client-side Fabric mod that backports Minecraft's **Items Model Definition system** to older Minecraft versions, allowing resource packs made for newer versions to use the newer item model definition format.
+
+For Minecraft **26.2**, the vanilla game already provides the Items Model Definition system. This version of Modefite therefore focuses on maintaining Modefite compatibility and extensions on the new 26.2 item-model architecture rather than duplicating functionality that is already native to Minecraft.
 
 ## Minecraft 26.2
 
-This repository contains the Minecraft 26.2 / Fabric 0.19.5 migration work.
+| Component | Version |
+|---|---|
+| Minecraft | **26.2** |
+| Fabric Loader | **0.19.5** |
+| Fabric API | **0.161.0+26.2** |
+| Java | **25** |
+| Modefite | **0.1.5** |
 
-- Minecraft: 26.2
-- Fabric Loader: 0.19.5
-- Fabric API: 0.161.0+26.2
-- Java: 25
-- Modefite: 0.1.5
+## FAQ
 
-Minecraft 26.2 includes native item model definitions. This port therefore focuses on preserving Modefite-specific compatibility and extensions rather than duplicating vanilla functionality.
+---
 
-## Resource-pack configuration
+### What does Modefite do on 26.2?
 
-Enchantment Outlines uses Respackopts for its configuration UI. Install a compatible Respackopts release (and its required dependencies) if you want to configure supported resource packs.
+Minecraft 26.2 natively supports the Items Model Definition system introduced in Minecraft 1.21.4.
+
+Modefite remains useful as the compatibility layer for Modefite-specific behavior and extensions while resource packs can use the native 26.2 item-model pipeline.
+
+### Is this the same as the original 1.21.1 version?
+
+No. The 26.2 version uses Minecraft's newer item-model APIs and architecture. The original 1.21.x implementation relied on older client model-loading APIs that are no longer a one-to-one match on 26.2.
+
+The goal is to preserve the behavior of Modefite where it is still relevant while following the 26.2 client item-model architecture.
+
+### Resource packs and unknown fields
+
+Modefite was originally designed to make newer resource-pack item definitions usable on older Minecraft versions.
+
+For the original Modefite format, custom properties and fields can be placed under:
+
+`assets/<minecraft_or_modid>/modefite_items_override`
+
+Unknown properties or fields were intentionally ignored by Modefite instead of producing a missing model. Resource-pack authors should still follow the 26.2 item-model format when targeting Minecraft 26.2 itself.
+
+### What about Enchantment Outlines configuration?
+
+The **Enchantment Outlines** resource pack uses **Respackopts** to provide its configurable resource-pack options.
+
+Modefite does not provide the configuration menu itself. Install a compatible Respackopts release and its required dependencies if you want to configure supported resource packs.
+
+### Core shaders
+
+Some resource packs may include core shaders that are incompatible with a particular Minecraft version. If a resource-pack reload fails after enabling a pack, check the pack's shader files and the game's `latest.log` for the actual error.
+
+### Where should I report problems?
+
+Please report Modefite bugs, compatibility problems, and feature requests through the GitHub issue tracker.
+
+Also include your Minecraft version, Fabric Loader version, Fabric API version, Modefite version, the affected resource pack, and relevant `latest.log` information when possible.
+
+## Why Modefite?
+
+---
+
+Before Minecraft 1.21.4, TimmyChips created **Pommel** to provide separate held models and other item-model behavior for resource packs.
+
+Minecraft 1.21.4 and later introduced the Items Model Definition system, giving resource-pack creators substantially more control over item models. Modefite was created to bring that system to older Minecraft versions and make newer resource packs easier to backport.
+
+Modefite grew from the same resource-pack compatibility work that involved projects such as CIT Resewn, Eating Animation, EMF, and ETF.
+
+## Minecraft 26.2 development
+
+---
+
+Minecraft 26.2 changed the client item-model architecture substantially compared with the original 1.21.x implementation.
+
+The 26.2 port therefore follows the native client item-model pipeline instead of attempting to copy obsolete 1.21.x classes and Mixins directly.
+
+Current migration work includes:
+
+- Minecraft 26.2 compatibility
+- Fabric Loader 0.19.5
+- Fabric API 0.161.0+26.2
+- Java 25
+- Updated Gradle/Loom build configuration
+- Removal of obsolete 1.21.x Mixin hooks
+- Compatibility with the native 26.2 item-definition system
+- Respackopts detection for resource-pack configuration workflows
 
 ## Build
 
-Use the included Gradle wrapper:
+---
+
+Linux/macOS:
 
 ```bash
 ./gradlew build
 ```
 
-On Windows:
+Windows:
 
 ```powershell
-.gradlew.bat build
+.\gradlew.bat build
 ```
+
+Java **25** is required.
+
+## Original project
+
+---
+
+The original Modefite implementation and its documentation are maintained by TimmyChips:
+
+https://github.com/TimmyChips/Modefite-Item-Defintion-Backport
+
+This 26.2 work is based on the original project's design and behavior, adapted to Minecraft's 26.2 client architecture.
 
 ## License
 
-See the repository license and upstream project information for licensing details.
+---
+
+See the repository license for licensing information.
