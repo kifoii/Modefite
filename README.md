@@ -1,10 +1,15 @@
 # Modefite - Item Definition Backport
 
+<p align="center">
+  <a href="README.md">English</a> |
+  <a href="README.zh-CN.md">简体中文</a>
+</p>
+
 ---
 
-Modefite is a client-side Fabric mod that backports Minecraft's **Items Model Definition system** to older Minecraft versions, allowing resource packs made for newer versions to use the newer item model definition format.
+Modefite is a client-side Fabric mod focused on compatibility and extensions for Minecraft's **Items Model Definition system**.
 
-For Minecraft **26.2**, the vanilla game already provides the Items Model Definition system. This version of Modefite therefore focuses on maintaining Modefite compatibility and extensions on the new 26.2 item-model architecture rather than duplicating functionality that is already native to Minecraft.
+For Minecraft **26.2**, the vanilla game already provides the Items Model Definition system. This version of Modefite therefore focuses on maintaining Modefite compatibility and extensions on Minecraft's native 26.2 item-model architecture rather than duplicating functionality that is already built into the game.
 
 ## Minecraft 26.2
 
@@ -82,28 +87,10 @@ Current migration work includes:
 - Fabric Loader 0.19.5
 - Fabric API 0.161.0+26.2
 - Java 25
-- Updated Gradle/Loom build configuration
+- Updated Gradle/Loom configuration
 - Removal of obsolete 1.21.x Mixin hooks
 - Compatibility with the native 26.2 item-definition system
 - Respackopts detection for resource-pack configuration workflows
-
-## Build
-
----
-
-Linux/macOS:
-
-```bash
-./gradlew build
-```
-
-Windows:
-
-```powershell
-.\gradlew.bat build
-```
-
-Java **25** is required.
 
 ## Original project
 
