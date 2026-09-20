@@ -47,12 +47,6 @@ Modefite 最初的目标之一，是让较新的资源包物品定义能够在�
 
 Modefite 原本会忽略未知属性或字段，而不是直接生成缺失模型。针对 Minecraft 26.2 本身制作资源包时，仍应按照 26.2 原生的物品模型格式编写。
 
-### Enchantment Outlines 怎么配置？
-
-**Enchantment Outlines** 资源包使用 **Respackopts** 提供可配置选项。
-
-Modefite 本身不提供配置菜单。需要配置支持 Respackopts 的资源包时，请安装兼容的 Respackopts 版本以及它所需要的依赖。
-
 ### Core Shader
 
 部分资源包可能包含与特定 Minecraft 版本不兼容的 Core Shader。如果启用资源包后重新加载失败，请检查资源包中的 shader 文件，并查看游戏的 `latest.log` 获取具体错误。
