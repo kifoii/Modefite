@@ -47,12 +47,6 @@ For the original Modefite format, custom properties and fields can be placed und
 
 Unknown properties or fields were intentionally ignored by Modefite instead of producing a missing model. Resource-pack authors should still follow the 26.2 item-model format when targeting Minecraft 26.2 itself.
 
-### What about Enchantment Outlines configuration?
-
-The **Enchantment Outlines** resource pack uses **Respackopts** to provide its configurable resource-pack options.
-
-Modefite does not provide the configuration menu itself. Install a compatible Respackopts release and its required dependencies if you want to configure supported resource packs.
-
 ### Core shaders
 
 Some resource packs may include core shaders that are incompatible with a particular Minecraft version. If a resource-pack reload fails after enabling a pack, check the pack's shader files and the game's `latest.log` for the actual error.
