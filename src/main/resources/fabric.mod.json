@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "modefite",
+  "version": "${version}",
+  "name": "Modefite - Item Definition Backport",
+  "description": "Compatibility layer for resource packs using the 1.21.4+ item model definition system on Minecraft 26.2.",
+  "authors": ["TimmyChips"],
+  "contact": {
+    "homepage": "https://github.com/TimmyChips/Modefite-Item-Defintion-Backport",
+    "sources": "https://github.com/TimmyChips/Modefite-Item-Defintion-Backport"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": ["timmychips.modefiteitemdefinitions.Modefite"],
+    "client": ["timmychips.modefiteitemdefinitions.ModefiteClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "respackopts": "*"
+  }
+}
